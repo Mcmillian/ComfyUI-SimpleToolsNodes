@@ -12,7 +12,7 @@ def get_api_key():
             config = json.load(f)
         api_key = config["CHATGLM_API_KEY"]
     except:
-        print("出错啦 Error: API key is required")
+        print("Error: API key is required")
         return ""
     return api_key
 
@@ -42,7 +42,7 @@ class GlmPromptNode:
             }
         }
 
-    CATEGORY = "简单节点"
+    CATEGORY = "SimpleNode"
     OUTPUT_NODE = True
     RETURN_NAMES = ("clip-L", "clip-T5")
     RETURN_TYPES = ("STRING", "STRING")
@@ -53,8 +53,11 @@ class GlmPromptNode:
     """
 
     def PROCESSOR(self, prompt, model, max_tokens, system):
+        if not prompt:
+            return ("", "")
         if not hasattr(self, "client"):
-            raise "请先在Config中设置CHATGLM_API_KEY"
+            #raise "请先在Config中设置CHATGLM_API_KEY"
+            raise "please set CHATGLM_API_KEY in Config.json"
         response = self.client.chat.completions.create(
             model=model,
             max_tokens=max_tokens,

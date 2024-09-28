@@ -19,9 +19,9 @@ class GetModelStep:
             },
         }
 
-    CATEGORY = "简单节点"
+    CATEGORY = "SimpleNode"
     OUTPUT_NODE = True
-    RETURN_NAMES = ("模型名称", "步数")
+    RETURN_NAMES = ("model", "steps")
     RETURN_TYPES = ("STRING", "INT")
     FUNCTION = "parse"
     DESCRIPTION = "根据模型名称来获取步数，无法识别时，使用缺省的step值"
@@ -69,6 +69,4 @@ class GetModelStep:
         match = re.search(pattern, name, re.IGNORECASE)
         if match:
             step = int(match.group(1))
-        else:
-            print("模型名不包含步数信息，使用默认步数：" + str(step))
         return (name, step,)
