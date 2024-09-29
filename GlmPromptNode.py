@@ -49,7 +49,7 @@ class GlmPromptNode:
     FUNCTION = "PROCESSOR"
 
     DESCRIPTION = """
-    使用ChatGlm，生成更细致的提示词。
+    generate prompt using chatglm api
     """
 
     def PROCESSOR(self, prompt, model, max_tokens, system):

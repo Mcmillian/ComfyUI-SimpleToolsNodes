@@ -5,8 +5,8 @@ NODE_CLASS_MAPPINGS  = {
     "GlmPromptNode": GlmPromptNode
 }
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "GetModelStep": "获取Unet模型步数",
-    "GlmPromptNode": "GLM提示词"
+    "GetModelStep": "get step by unet model name",
+    "GlmPromptNode": "glm prompt"
 }
 __all__ = [
     "NODE_CLASS_MAPPINGS",

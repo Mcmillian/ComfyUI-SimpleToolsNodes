@@ -1,3 +1,27 @@
+### Simple tool node
+This is a ComfyUI plugin, currently there are two nodes:
+
+- GetModelStep Get model steps
+ You can output the model steps marked according to the loaded model name. If it is not recognized, the specified default steps are output.
+ Currently only supports UnetLoader, other model loaders have not been tested.
+- GlmPromptNode Generate prompt words  
+ use ChatGLM api, no need to install the model locally, but need to be connected to the Internet.  
+ paid models need to be purchased and configured by yourself  
+ The default model is glm-4-flash, which is free. Other models need to be configured in the plugin directory, CHATGLM_API_KEY in config.json. Chatglm key acquisition address: https://open.bigmodel.cn/usercenter/apikeys
+
+### Installation
+- Download  
+Code -> Download ZIP in the upper right corner  
+unzip to ComfyUI\custom_nodes  
+enter the directory, double-click install.bat  
+restart ComfyUI after completion.
+
+- Git  
+cd ComfyUI\custom_nodes  
+git clone https://github.com/Mcmillian/ComfyUI-SimpleToolsNodes.git  
+ComfyUI-SimpleToolsNodes\install.bat  
+restart ComfyUI.
+
 ### 简单工具节点
 
 这是一个ComfyUI插件，目前有两个节点：
@@ -14,6 +38,6 @@
 - 下载安装方式：右上角Code -> Download ZIP，解压到ComfyUI\custom_nodes，进入目录中，双击install.bat，完成后重启ComfyUI。
 - git 安装方式：  
  cd ComfyUI\custom_nodes  
- git clone https://github.com/Mcmillian/ComfyUI-SimpleToolsNodes.git
- ComfyUI-SimpleToolsNodes\install.bat
+ git clone https://github.com/Mcmillian/ComfyUI-SimpleToolsNodes.git  
+ ComfyUI-SimpleToolsNodes\install.bat  
  重启ComfyUI。

@@ -24,7 +24,7 @@ class GetModelStep:
     RETURN_NAMES = ("model", "steps")
     RETURN_TYPES = ("STRING", "INT")
     FUNCTION = "parse"
-    DESCRIPTION = "根据模型名称来获取步数，无法识别时，使用缺省的step值"
+    DESCRIPTION = "get steps by model name"
 
     def parse(self, model, step, prompt, extra_pnginfo, unique_id):
         workflow = extra_pnginfo["workflow"]
