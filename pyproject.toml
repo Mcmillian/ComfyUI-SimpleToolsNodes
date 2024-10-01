@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-simpletoolsnodes"
+description = "Two simple nodes: 1. Get the steps based on the model name, 2. Generate prompts using chatglm."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["zhipuai", "json_repair"]
+
+[project.urls]
+Repository = "https://github.com/Mcmillian/ComfyUI-SimpleToolsNodes"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-SimpleToolsNodes"
+Icon = ""
